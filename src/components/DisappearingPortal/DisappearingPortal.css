@@ -1,0 +1,57 @@
+.DisappearingPortal {
+    font-size: min(4vh, 4vw);
+    color: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: min(0vw, 0vh);
+    height: min(0vw, 0vh);
+    border: solid transparent min(.6vw, .6vh);
+    border-radius: 50%;
+    flex-grow: 1;
+    margin: 0vw;
+    max-width: min(25vw, 25vh);
+    transition: 
+        all 1s, 
+        border 250ms, 
+        width 1750ms 600ms, 
+        height 400ms,
+        margin 150ms 600ms,
+        color 400ms;
+}
+
+
+.DisappearingPortal--appear {
+    width: min(25vw, 25vh);
+    height: min(25vw, 25vh);
+    border-radius: 50%;
+    border: solid black min(.6vw, .6vh);
+    color: black;
+    margin: 2vw;
+    transition: 
+        all 1s,
+        border 1750ms 1250ms, 
+        width 800ms 600ms, 
+        height 1s,
+        margin 150ms 600ms,
+        color 1750ms 1250ms;
+}
+
+.DisappearingPortal--appear-small {
+    font-size: min(3.5vh, 3.5vw);
+    width: min(20vw, 20vh);
+    height: min(20vw, 20vh);
+    border-radius: 50%;
+    border: solid black min(.6vw, .6vh);
+    color: black;
+    margin: 1vw;
+    margin-top: .2vh;
+    /* max-width: min(10vw, 10vh); */
+    transition: 
+        all 1s,
+        border 1750ms 1250ms, 
+        width 800ms 600ms, 
+        height 1s,
+        margin 150ms 600ms,
+        color 1750ms 1250ms;
+}

@@ -1,38 +1,69 @@
+/*----------------------------------------------
+NOTE: For ease of development and readability
+this sheet contains all property blocks that
+contain z-index value changes.
+
+The effected components/elements from values
+in this sheet are meant to move in-front-of & 
+behind the rest of the application.
+
+All selectors that are not in this file are
+organized into style sheets with names that 
+match their respective components.
+----------------------------------------------*/
+
+/* App 
+-> The wall behind the play */
+
 .App {
-  text-align: center;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgb(247, 208, 157);
+  position: fixed;
+  z-index: -2;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* Collapsable Landing Background
+-> The stage-front curtain*/
+
+.CollapsableLandingBackground {
+  width: 100%;
+  height: 100%;
+  background: no-repeat center center url("./assets/images/RandyAndNigel.jpg");
+  background-size: cover;
+  position: fixed;
+  z-index: -1;
+  transition:
+    all 1s,
+    width 1s 600ms,
+    height 1s 600ms,
+    z-index 0s 0s,
+    border-bottom-right-radius 1s 500ms;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.CollapsableLandingBackground--collapse-to-corner {
+  width: min(25vw, 25vh);
+  height: min(20vw, 20vh);
+  border-bottom-right-radius: 50%;
+  z-index: 1;
+  transition: 
+    all 1s, 
+    z-index 0s 1s,
+    width 1s 500ms,
+    height 1s 500ms,
+    border-bottom-right-radius 1s 500ms;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+/* Top Level Transparent Click
+-> A clickable 4th wall*/
+
+.TopLevelTransparentClick {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  z-index: 2;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.TopLevelTransparentClick--bottom-of-stack {
+  z-index: -1;
 }

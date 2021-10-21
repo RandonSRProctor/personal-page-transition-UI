@@ -1,0 +1,67 @@
+.RemoteControl-container {
+    margin-right: 40vw;
+    margin-bottom: 60vh;
+    width: fit-content;
+    height: 10%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition:
+        height 1000ms,
+        margin-bottom 600ms, 
+        margin-right 800ms 600ms;
+}
+
+.RemoteControl-container--center {
+    margin-right: 0vw;
+    margin-bottom: 0vh;
+    transition:
+        margin-bottom 600ms, 
+        margin-right 800ms 600ms;
+}
+.RemoteControl-container--top {
+    margin-right: 7vw;
+    margin-left: 25vw;
+    margin-bottom: 75vh;
+    height: 100%;
+    width: 80vw;
+    transition:
+        height 1000ms,
+        margin-bottom 600ms, 
+        margin-right 800ms 600ms;
+}
+
+.Portal-group {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    /* flex-wrap: wrap; */
+}
+
+@media only screen and (max-width: 400px) {
+    /* For mobile phones: */
+    .Portal {
+        margin: 5vw !important;
+    }
+
+    .Portal-group {
+        /* flex-direction: column; */
+        align-items: center;
+        flex-wrap: wrap;
+    }
+  }
+
+.landing-Title {
+    margin-bottom: 1vh;
+    font-size: min(9vh, 9vw);
+    height: min(9vh, 9vw);
+    color: antiquewhite;
+    transition: all 1s, color 1250ms 1250ms;
+}
+
+.landing-Title--hidden {
+    height: min(0vh, 0vw);
+    color: transparent;
+    transition: all 750ms;
+}
+
