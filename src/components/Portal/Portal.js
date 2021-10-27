@@ -12,10 +12,10 @@ export const Portal = ({ children }) => {
       {'Portal--expand-small': navAndContent},
     )
     return (
-        <>
+        <div>
             <div onClick={setLayoutToNavAndContent} className={PortalClasses}>
                 {children}
             </div>
-        </>
+        </div>
     )
 }

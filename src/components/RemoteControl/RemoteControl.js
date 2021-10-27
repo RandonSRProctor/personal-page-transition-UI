@@ -23,6 +23,7 @@ export const RemoteControl = () => {
         <div className={remoteControlContainerClasses}>
             <Title className={landingTitleClasses} />
             <div className="Portal-group">
+                <Portal />
                 <Portal>developer</Portal>
                 <Portal>musician</Portal>
                 <Portal>organizer</Portal>

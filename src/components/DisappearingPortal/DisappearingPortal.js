@@ -11,10 +11,10 @@ export const DisappearingPortal = ({ children }) => {
       {'DisappearingPortal--appear-small': navAndContent},
     )
     return (
-        <>
+        <div>
             <div className={DisappearingPortalClasses}>
                 {children}
             </div>
-        </>
+        </div>
     )
 }

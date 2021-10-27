@@ -42,8 +42,8 @@ match their respective components.
 }
 
 .CollapsableLandingBackground--collapse-to-corner {
-  width: min(25vw, 25vh);
-  height: min(20vw, 20vh);
+  width: 16.66vw;
+  height: min(25vw, 25vh);
   border-bottom-right-radius: 50%;
   z-index: 1;
   transition: 
